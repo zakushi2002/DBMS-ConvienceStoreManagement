@@ -5,7 +5,8 @@ namespace ConvienceStore
 {
     public class MY_DB
     {
-        SqlConnection con1 = new SqlConnection(@"Data Source=LAPTOP-9VS351BG;Initial Catalog=StoreManagement;Integrated Security=True");
+        //Phan quyen doi voi Manager
+        SqlConnection con1 = new SqlConnection(@"Data Source=MSI;Initial Catalog=StoreManagement;Persist Security Info=True;User ID=managerAdmin;Password=1");
         public SqlConnection getConnectionManager
         {
             get
@@ -27,7 +28,8 @@ namespace ConvienceStore
                 con1.Close();
             }
         }
-        SqlConnection con2 = new SqlConnection(@"Data Source=LAPTOP-9VS351BG;Initial Catalog=StoreManagement;Integrated Security=True");
+        //Phan quyen doi voi Employee
+        SqlConnection con2 = new SqlConnection(@"Data Source=MSI;Initial Catalog=StoreManagement;Persist Security Info=True;User ID=employeeUser;Password=1");
         public SqlConnection getConnectionEmployee
         {
             get
@@ -47,14 +49,6 @@ namespace ConvienceStore
             if ((con2.State == ConnectionState.Closed))
             {
                 con2.Close();
-            }
-        }
-        SqlConnection coni = new SqlConnection(@"Data Source=LAPTOP-9VS351BG;Initial Catalog=StoreManagement;Integrated Security=True");
-        public SqlConnection getConnectionInvoice
-        {
-            get
-            {
-                return coni;
             }
         }
     }

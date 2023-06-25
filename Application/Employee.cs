@@ -90,9 +90,9 @@ namespace ConvienceStore
         {
             mydb.openConnectionManager();
             SqlCommand command = new SqlCommand("SELECT dbo.fn_CountEmployee() AS [Num]", mydb.getConnectionManager);
-            int totalMale = (int)command.ExecuteScalar();
+            int totalEmployees = (int)command.ExecuteScalar();
             mydb.closeConnectionManager();
-            return totalMale;
+            return totalEmployees;
         }
 
     }

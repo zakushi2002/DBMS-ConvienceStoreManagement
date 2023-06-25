@@ -15,6 +15,7 @@ namespace ConvienceStore
         static void Main()
         {
             loadapp();
+            //Application.Run(new ManageInvoice());
         }
         public static void loadapp()
         {

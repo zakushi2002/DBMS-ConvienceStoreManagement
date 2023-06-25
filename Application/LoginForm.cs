@@ -74,5 +74,14 @@ namespace ConvienceStore
             
         }
 
+        private void newaccountButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void forgotButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

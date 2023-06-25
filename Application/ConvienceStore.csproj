@@ -46,12 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddCustomerFormcs.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AddCustomerFormcs.Designer.cs">
-      <DependentUpon>AddCustomerFormcs.cs</DependentUpon>
-    </Compile>
     <Compile Include="AddEmployee.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,14 +60,7 @@
     <Compile Include="EmployeeMainForm.Designer.cs">
       <DependentUpon>EmployeeMainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Employee\AddInvoiceForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Employee\AddInvoiceForm.Designer.cs">
-      <DependentUpon>AddInvoiceForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Invoice.cs" />
-    <Compile Include="Product.cs" />
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +91,12 @@
     <Compile Include="ManageManuafacture.Designer.cs">
       <DependentUpon>ManageManuafacture.cs</DependentUpon>
     </Compile>
+    <Compile Include="ManageProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageProduct.Designer.cs">
+      <DependentUpon>ManageProduct.cs</DependentUpon>
+    </Compile>
     <Compile Include="ManagerMainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,19 +116,14 @@
       <DependentUpon>ManageType.cs</DependentUpon>
     </Compile>
     <Compile Include="MY_DB.cs" />
+    <Compile Include="Product.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="AddCustomerFormcs.resx">
-      <DependentUpon>AddCustomerFormcs.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="AddEmployee.resx">
       <DependentUpon>AddEmployee.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EmployeeMainForm.resx">
       <DependentUpon>EmployeeMainForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Employee\AddInvoiceForm.resx">
-      <DependentUpon>AddInvoiceForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
@@ -151,6 +139,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ManageManuafacture.resx">
       <DependentUpon>ManageManuafacture.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageProduct.resx">
+      <DependentUpon>ManageProduct.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ManagerMainForm.resx">
       <DependentUpon>ManagerMainForm.cs</DependentUpon>
@@ -188,7 +179,26 @@
     <None Include="Images\cancelButton.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Employee\" />
     <Folder Include="Manager\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\test.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\text21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\cheo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\key2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

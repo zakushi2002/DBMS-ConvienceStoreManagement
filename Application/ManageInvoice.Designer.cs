@@ -36,7 +36,7 @@
             this.labelCustomerName = new System.Windows.Forms.Label();
             this.txtBoxPhone = new System.Windows.Forms.TextBox();
             this.labelPhone = new System.Windows.Forms.Label();
-            this.textBoxCustomerID = new System.Windows.Forms.TextBox();
+            this.txtBoxCustomerID = new System.Windows.Forms.TextBox();
             this.labelCustomerID = new System.Windows.Forms.Label();
             this.txtEmployeeID = new System.Windows.Forms.TextBox();
             this.labelEmployeeID = new System.Windows.Forms.Label();
@@ -45,16 +45,15 @@
             this.labelInvoiceID = new System.Windows.Forms.Label();
             this.labelEmployeeName = new System.Windows.Forms.Label();
             this.groupBoxProduct = new System.Windows.Forms.GroupBox();
+            this.labelIntoMoney = new System.Windows.Forms.Label();
+            this.numericUpDown = new System.Windows.Forms.NumericUpDown();
             this.addButton = new System.Windows.Forms.Button();
             this.removeFromInvoicebutton = new System.Windows.Forms.Button();
             this.labelTotalPay = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxProduct = new System.Windows.Forms.PictureBox();
             this.addToInvoiceButton = new System.Windows.Forms.Button();
             this.labelUnit = new System.Windows.Forms.Label();
-            this.editButton = new System.Windows.Forms.Button();
             this.txtBoxIntoMoney = new System.Windows.Forms.TextBox();
-            this.labelIntoMoney = new System.Windows.Forms.Label();
-            this.txtBoxQuantity = new System.Windows.Forms.TextBox();
             this.labelQuantity = new System.Windows.Forms.Label();
             this.txtBoxPrice = new System.Windows.Forms.TextBox();
             this.labelPrice = new System.Windows.Forms.Label();
@@ -63,14 +62,12 @@
             this.txtBoxProductID = new System.Windows.Forms.TextBox();
             this.labelProductID = new System.Windows.Forms.Label();
             this.cancelButton = new System.Windows.Forms.Button();
-            this.printButton = new System.Windows.Forms.Button();
-            this.saveButton = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.removeButton = new System.Windows.Forms.Button();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.groupBoxInvoice.SuspendLayout();
             this.groupBoxProduct.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProduct)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
@@ -84,7 +81,7 @@
             this.groupBoxInvoice.Controls.Add(this.labelCustomerName);
             this.groupBoxInvoice.Controls.Add(this.txtBoxPhone);
             this.groupBoxInvoice.Controls.Add(this.labelPhone);
-            this.groupBoxInvoice.Controls.Add(this.textBoxCustomerID);
+            this.groupBoxInvoice.Controls.Add(this.txtBoxCustomerID);
             this.groupBoxInvoice.Controls.Add(this.labelCustomerID);
             this.groupBoxInvoice.Controls.Add(this.txtEmployeeID);
             this.groupBoxInvoice.Controls.Add(this.labelEmployeeID);
@@ -173,14 +170,14 @@
             this.labelPhone.TabIndex = 93;
             this.labelPhone.Text = "Phone:";
             // 
-            // textBoxCustomerID
+            // txtBoxCustomerID
             // 
-            this.textBoxCustomerID.Enabled = false;
-            this.textBoxCustomerID.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold);
-            this.textBoxCustomerID.Location = new System.Drawing.Point(516, 75);
-            this.textBoxCustomerID.Name = "textBoxCustomerID";
-            this.textBoxCustomerID.Size = new System.Drawing.Size(172, 27);
-            this.textBoxCustomerID.TabIndex = 96;
+            this.txtBoxCustomerID.Enabled = false;
+            this.txtBoxCustomerID.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold);
+            this.txtBoxCustomerID.Location = new System.Drawing.Point(516, 75);
+            this.txtBoxCustomerID.Name = "txtBoxCustomerID";
+            this.txtBoxCustomerID.Size = new System.Drawing.Size(172, 27);
+            this.txtBoxCustomerID.TabIndex = 96;
             // 
             // labelCustomerID
             // 
@@ -260,16 +257,15 @@
             // 
             // groupBoxProduct
             // 
+            this.groupBoxProduct.Controls.Add(this.labelIntoMoney);
+            this.groupBoxProduct.Controls.Add(this.numericUpDown);
             this.groupBoxProduct.Controls.Add(this.addButton);
             this.groupBoxProduct.Controls.Add(this.removeFromInvoicebutton);
             this.groupBoxProduct.Controls.Add(this.labelTotalPay);
-            this.groupBoxProduct.Controls.Add(this.pictureBox1);
+            this.groupBoxProduct.Controls.Add(this.pictureBoxProduct);
             this.groupBoxProduct.Controls.Add(this.addToInvoiceButton);
             this.groupBoxProduct.Controls.Add(this.labelUnit);
-            this.groupBoxProduct.Controls.Add(this.editButton);
             this.groupBoxProduct.Controls.Add(this.txtBoxIntoMoney);
-            this.groupBoxProduct.Controls.Add(this.labelIntoMoney);
-            this.groupBoxProduct.Controls.Add(this.txtBoxQuantity);
             this.groupBoxProduct.Controls.Add(this.labelQuantity);
             this.groupBoxProduct.Controls.Add(this.txtBoxPrice);
             this.groupBoxProduct.Controls.Add(this.labelPrice);
@@ -278,105 +274,17 @@
             this.groupBoxProduct.Controls.Add(this.txtBoxProductID);
             this.groupBoxProduct.Controls.Add(this.labelProductID);
             this.groupBoxProduct.Controls.Add(this.cancelButton);
-            this.groupBoxProduct.Controls.Add(this.printButton);
-            this.groupBoxProduct.Controls.Add(this.saveButton);
             this.groupBoxProduct.Controls.Add(this.dataGridView1);
-            this.groupBoxProduct.Controls.Add(this.removeButton);
             this.groupBoxProduct.Controls.Add(this.dataGridView2);
             this.groupBoxProduct.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold);
             this.groupBoxProduct.Location = new System.Drawing.Point(12, 227);
             this.groupBoxProduct.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBoxProduct.Name = "groupBoxProduct";
             this.groupBoxProduct.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBoxProduct.Size = new System.Drawing.Size(1070, 474);
+            this.groupBoxProduct.Size = new System.Drawing.Size(1081, 474);
             this.groupBoxProduct.TabIndex = 101;
             this.groupBoxProduct.TabStop = false;
             this.groupBoxProduct.Text = "Information Of Product";
-            // 
-            // addButton
-            // 
-            this.addButton.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.addButton.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold);
-            this.addButton.Location = new System.Drawing.Point(17, 409);
-            this.addButton.Name = "addButton";
-            this.addButton.Size = new System.Drawing.Size(180, 52);
-            this.addButton.TabIndex = 115;
-            this.addButton.Text = "Add";
-            this.addButton.UseVisualStyleBackColor = false;
-            // 
-            // removeFromInvoicebutton
-            // 
-            this.removeFromInvoicebutton.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.removeFromInvoicebutton.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold);
-            this.removeFromInvoicebutton.Location = new System.Drawing.Point(812, 77);
-            this.removeFromInvoicebutton.Name = "removeFromInvoicebutton";
-            this.removeFromInvoicebutton.Size = new System.Drawing.Size(199, 52);
-            this.removeFromInvoicebutton.TabIndex = 114;
-            this.removeFromInvoicebutton.Text = "Remove From Invoice";
-            this.removeFromInvoicebutton.UseVisualStyleBackColor = false;
-            // 
-            // labelTotalPay
-            // 
-            this.labelTotalPay.AutoSize = true;
-            this.labelTotalPay.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold);
-            this.labelTotalPay.Location = new System.Drawing.Point(794, 369);
-            this.labelTotalPay.Name = "labelTotalPay";
-            this.labelTotalPay.Size = new System.Drawing.Size(268, 26);
-            this.labelTotalPay.TabIndex = 14;
-            this.labelTotalPay.Text = "Total Pay:  0.000.000 vnd";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.White;
-            this.pictureBox1.Location = new System.Drawing.Point(651, 21);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(108, 108);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 103;
-            this.pictureBox1.TabStop = false;
-            // 
-            // addToInvoiceButton
-            // 
-            this.addToInvoiceButton.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.addToInvoiceButton.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold);
-            this.addToInvoiceButton.Location = new System.Drawing.Point(812, 21);
-            this.addToInvoiceButton.Name = "addToInvoiceButton";
-            this.addToInvoiceButton.Size = new System.Drawing.Size(199, 52);
-            this.addToInvoiceButton.TabIndex = 97;
-            this.addToInvoiceButton.Text = "Add To Invoice";
-            this.addToInvoiceButton.UseVisualStyleBackColor = false;
-            // 
-            // labelUnit
-            // 
-            this.labelUnit.AutoSize = true;
-            this.labelUnit.BackColor = System.Drawing.Color.Transparent;
-            this.labelUnit.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelUnit.ForeColor = System.Drawing.Color.Black;
-            this.labelUnit.Location = new System.Drawing.Point(238, 71);
-            this.labelUnit.Name = "labelUnit";
-            this.labelUnit.Size = new System.Drawing.Size(47, 19);
-            this.labelUnit.TabIndex = 112;
-            this.labelUnit.Text = "/Unit";
-            // 
-            // editButton
-            // 
-            this.editButton.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.editButton.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold);
-            this.editButton.Location = new System.Drawing.Point(209, 409);
-            this.editButton.Name = "editButton";
-            this.editButton.Size = new System.Drawing.Size(180, 52);
-            this.editButton.TabIndex = 98;
-            this.editButton.Text = "Edit";
-            this.editButton.UseVisualStyleBackColor = false;
-            // 
-            // txtBoxIntoMoney
-            // 
-            this.txtBoxIntoMoney.Enabled = false;
-            this.txtBoxIntoMoney.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold);
-            this.txtBoxIntoMoney.Location = new System.Drawing.Point(437, 63);
-            this.txtBoxIntoMoney.Name = "txtBoxIntoMoney";
-            this.txtBoxIntoMoney.Size = new System.Drawing.Size(144, 27);
-            this.txtBoxIntoMoney.TabIndex = 110;
             // 
             // labelIntoMoney
             // 
@@ -390,13 +298,92 @@
             this.labelIntoMoney.TabIndex = 109;
             this.labelIntoMoney.Text = "Total Amount:";
             // 
-            // txtBoxQuantity
+            // numericUpDown
             // 
-            this.txtBoxQuantity.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold);
-            this.txtBoxQuantity.Location = new System.Drawing.Point(115, 102);
-            this.txtBoxQuantity.Name = "txtBoxQuantity";
-            this.txtBoxQuantity.Size = new System.Drawing.Size(127, 27);
-            this.txtBoxQuantity.TabIndex = 108;
+            this.numericUpDown.Location = new System.Drawing.Point(115, 102);
+            this.numericUpDown.Name = "numericUpDown";
+            this.numericUpDown.Size = new System.Drawing.Size(127, 27);
+            this.numericUpDown.TabIndex = 116;
+            this.numericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.numericUpDown.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            // 
+            // addButton
+            // 
+            this.addButton.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.addButton.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold);
+            this.addButton.Location = new System.Drawing.Point(17, 409);
+            this.addButton.Name = "addButton";
+            this.addButton.Size = new System.Drawing.Size(180, 43);
+            this.addButton.TabIndex = 115;
+            this.addButton.Text = "Add";
+            this.addButton.UseVisualStyleBackColor = false;
+            this.addButton.Click += new System.EventHandler(this.addButton_Click);
+            // 
+            // removeFromInvoicebutton
+            // 
+            this.removeFromInvoicebutton.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.removeFromInvoicebutton.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold);
+            this.removeFromInvoicebutton.Location = new System.Drawing.Point(812, 77);
+            this.removeFromInvoicebutton.Name = "removeFromInvoicebutton";
+            this.removeFromInvoicebutton.Size = new System.Drawing.Size(199, 52);
+            this.removeFromInvoicebutton.TabIndex = 114;
+            this.removeFromInvoicebutton.Text = "Remove From Invoice";
+            this.removeFromInvoicebutton.UseVisualStyleBackColor = false;
+            this.removeFromInvoicebutton.Click += new System.EventHandler(this.removeFromInvoicebutton_Click);
+            // 
+            // labelTotalPay
+            // 
+            this.labelTotalPay.AutoSize = true;
+            this.labelTotalPay.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold);
+            this.labelTotalPay.Location = new System.Drawing.Point(794, 370);
+            this.labelTotalPay.Name = "labelTotalPay";
+            this.labelTotalPay.Size = new System.Drawing.Size(276, 26);
+            this.labelTotalPay.TabIndex = 14;
+            this.labelTotalPay.Text = "Total Pay: 0.000.000 VND";
+            // 
+            // pictureBoxProduct
+            // 
+            this.pictureBoxProduct.BackColor = System.Drawing.Color.White;
+            this.pictureBoxProduct.Location = new System.Drawing.Point(651, 21);
+            this.pictureBoxProduct.Name = "pictureBoxProduct";
+            this.pictureBoxProduct.Size = new System.Drawing.Size(108, 108);
+            this.pictureBoxProduct.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxProduct.TabIndex = 103;
+            this.pictureBoxProduct.TabStop = false;
+            // 
+            // addToInvoiceButton
+            // 
+            this.addToInvoiceButton.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.addToInvoiceButton.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold);
+            this.addToInvoiceButton.Location = new System.Drawing.Point(812, 21);
+            this.addToInvoiceButton.Name = "addToInvoiceButton";
+            this.addToInvoiceButton.Size = new System.Drawing.Size(199, 52);
+            this.addToInvoiceButton.TabIndex = 97;
+            this.addToInvoiceButton.Text = "Add To Invoice";
+            this.addToInvoiceButton.UseVisualStyleBackColor = false;
+            this.addToInvoiceButton.Click += new System.EventHandler(this.addToInvoiceButton_Click);
+            // 
+            // labelUnit
+            // 
+            this.labelUnit.AutoSize = true;
+            this.labelUnit.BackColor = System.Drawing.Color.Transparent;
+            this.labelUnit.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelUnit.ForeColor = System.Drawing.Color.Black;
+            this.labelUnit.Location = new System.Drawing.Point(238, 71);
+            this.labelUnit.Name = "labelUnit";
+            this.labelUnit.Size = new System.Drawing.Size(47, 19);
+            this.labelUnit.TabIndex = 112;
+            this.labelUnit.Text = "/Unit";
+            // 
+            // txtBoxIntoMoney
+            // 
+            this.txtBoxIntoMoney.Enabled = false;
+            this.txtBoxIntoMoney.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold);
+            this.txtBoxIntoMoney.Location = new System.Drawing.Point(451, 63);
+            this.txtBoxIntoMoney.Name = "txtBoxIntoMoney";
+            this.txtBoxIntoMoney.Size = new System.Drawing.Size(183, 27);
+            this.txtBoxIntoMoney.TabIndex = 110;
+            this.txtBoxIntoMoney.Text = "0 VND";
             // 
             // labelQuantity
             // 
@@ -435,9 +422,9 @@
             // 
             this.txtBoxProductName.Enabled = false;
             this.txtBoxProductName.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold);
-            this.txtBoxProductName.Location = new System.Drawing.Point(437, 26);
+            this.txtBoxProductName.Location = new System.Drawing.Point(451, 26);
             this.txtBoxProductName.Name = "txtBoxProductName";
-            this.txtBoxProductName.Size = new System.Drawing.Size(197, 27);
+            this.txtBoxProductName.Size = new System.Drawing.Size(183, 27);
             this.txtBoxProductName.TabIndex = 111;
             // 
             // labelProductName
@@ -459,6 +446,7 @@
             this.txtBoxProductID.Name = "txtBoxProductID";
             this.txtBoxProductID.Size = new System.Drawing.Size(127, 27);
             this.txtBoxProductID.TabIndex = 102;
+            this.txtBoxProductID.TextChanged += new System.EventHandler(this.txtBoxProductID_TextChanged);
             // 
             // labelProductID
             // 
@@ -478,32 +466,11 @@
             this.cancelButton.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold);
             this.cancelButton.Location = new System.Drawing.Point(915, 409);
             this.cancelButton.Name = "cancelButton";
-            this.cancelButton.Size = new System.Drawing.Size(150, 48);
+            this.cancelButton.Size = new System.Drawing.Size(150, 39);
             this.cancelButton.TabIndex = 79;
             this.cancelButton.Text = "Cancel";
             this.cancelButton.UseVisualStyleBackColor = false;
-            // 
-            // printButton
-            // 
-            this.printButton.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.printButton.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold);
-            this.printButton.Location = new System.Drawing.Point(750, 409);
-            this.printButton.Name = "printButton";
-            this.printButton.Size = new System.Drawing.Size(150, 48);
-            this.printButton.TabIndex = 78;
-            this.printButton.Text = "Print";
-            this.printButton.UseVisualStyleBackColor = false;
-            // 
-            // saveButton
-            // 
-            this.saveButton.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.saveButton.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold);
-            this.saveButton.Location = new System.Drawing.Point(587, 409);
-            this.saveButton.Name = "saveButton";
-            this.saveButton.Size = new System.Drawing.Size(150, 52);
-            this.saveButton.TabIndex = 60;
-            this.saveButton.Text = "Save";
-            this.saveButton.UseVisualStyleBackColor = false;
+            this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
             // 
             // dataGridView1
             // 
@@ -516,17 +483,7 @@
             this.dataGridView1.RowTemplate.Height = 28;
             this.dataGridView1.Size = new System.Drawing.Size(564, 222);
             this.dataGridView1.TabIndex = 49;
-            // 
-            // removeButton
-            // 
-            this.removeButton.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.removeButton.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold);
-            this.removeButton.Location = new System.Drawing.Point(401, 409);
-            this.removeButton.Name = "removeButton";
-            this.removeButton.Size = new System.Drawing.Size(180, 52);
-            this.removeButton.TabIndex = 58;
-            this.removeButton.Text = "Remove";
-            this.removeButton.UseVisualStyleBackColor = false;
+            this.dataGridView1.Click += new System.EventHandler(this.dataGridView1_Click);
             // 
             // dataGridView2
             // 
@@ -539,6 +496,7 @@
             this.dataGridView2.RowTemplate.Height = 28;
             this.dataGridView2.Size = new System.Drawing.Size(477, 222);
             this.dataGridView2.TabIndex = 113;
+            this.dataGridView2.Click += new System.EventHandler(this.dataGridView2_Click);
             // 
             // ManageInvoice
             // 
@@ -549,11 +507,13 @@
             this.Controls.Add(this.groupBoxProduct);
             this.Name = "ManageInvoice";
             this.Text = "AddInvoice";
+            this.Load += new System.EventHandler(this.ManageInvoice_Load);
             this.groupBoxInvoice.ResumeLayout(false);
             this.groupBoxInvoice.PerformLayout();
             this.groupBoxProduct.ResumeLayout(false);
             this.groupBoxProduct.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProduct)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
@@ -570,7 +530,7 @@
         private System.Windows.Forms.Label labelCustomerName;
         public System.Windows.Forms.TextBox txtBoxPhone;
         private System.Windows.Forms.Label labelPhone;
-        public System.Windows.Forms.TextBox textBoxCustomerID;
+        public System.Windows.Forms.TextBox txtBoxCustomerID;
         private System.Windows.Forms.Label labelCustomerID;
         public System.Windows.Forms.TextBox txtEmployeeID;
         private System.Windows.Forms.Label labelEmployeeID;
@@ -579,11 +539,9 @@
         private System.Windows.Forms.Label labelInvoiceID;
         private System.Windows.Forms.Label labelEmployeeName;
         private System.Windows.Forms.GroupBox groupBoxProduct;
-        private System.Windows.Forms.Button editButton;
         private System.Windows.Forms.Button addToInvoiceButton;
         public System.Windows.Forms.TextBox txtBoxIntoMoney;
         private System.Windows.Forms.Label labelIntoMoney;
-        public System.Windows.Forms.TextBox txtBoxQuantity;
         private System.Windows.Forms.Label labelQuantity;
         public System.Windows.Forms.TextBox txtBoxPrice;
         private System.Windows.Forms.Label labelPrice;
@@ -592,15 +550,13 @@
         public System.Windows.Forms.TextBox txtBoxProductID;
         private System.Windows.Forms.Label labelProductID;
         private System.Windows.Forms.Button cancelButton;
-        private System.Windows.Forms.Button printButton;
         private System.Windows.Forms.Label labelTotalPay;
-        private System.Windows.Forms.Button saveButton;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button removeButton;
         private System.Windows.Forms.Label labelUnit;
         private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBoxProduct;
         private System.Windows.Forms.Button removeFromInvoicebutton;
         private System.Windows.Forms.Button addButton;
+        private System.Windows.Forms.NumericUpDown numericUpDown;
     }
 }

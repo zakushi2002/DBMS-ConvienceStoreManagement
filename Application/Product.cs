@@ -14,7 +14,7 @@ namespace ConvienceStore
         MY_DB mydb = new MY_DB();
         SqlCommand command;
         //PRODUCT
-        public bool insertProduct(string pid, string pname, float pprice, string tid,string unitname, MemoryStream pimage)
+        public bool insertProduct(string pid, string pname, double pprice, string tid,string unitname, MemoryStream pimage)
         {
             command = new SqlCommand("EXEC SP_AddProduct @id ,@name ,@price ,@typeid ,@unitname, @image ", mydb.getConnectionManager);
             command.Parameters.Add("@id", SqlDbType.NChar).Value = pid;
@@ -36,7 +36,7 @@ namespace ConvienceStore
             }
 
         }
-        public bool UpdateProduct(string pid, string pname, float pprice, string tid, string unitname, MemoryStream pimage)
+        public bool UpdateProduct(string pid, string pname, double pprice, string tid, string unitname, MemoryStream pimage)
         {
             command = new SqlCommand("EXEC SP_UpdateProduct @id ,@name ,@price ,@typeid ,@unitname, @image ", mydb.getConnectionManager);
             command.Parameters.Add("@id", SqlDbType.NChar).Value = pid;
@@ -73,6 +73,7 @@ namespace ConvienceStore
             }
         }
 
+
         public DataTable getProduct(string cmd)
         {
             command = new SqlCommand(cmd);
@@ -82,13 +83,13 @@ namespace ConvienceStore
             adapter.Fill(table);
             return table;
         }
-        public int totalCustomers()
+        public int totalProducts()
         {
             mydb.openConnectionManager();
-            SqlCommand command = new SqlCommand("SELECT dbo.fn_CountProduct() AS [NumPro]", mydb.getConnectionManager);
-            int totalCustomer = (int)command.ExecuteScalar();
+            SqlCommand command = new SqlCommand("SELECT dbo.fn_CountProductS() AS [NumPro]", mydb.getConnectionManager);
+            int totalProducts = (int)command.ExecuteScalar();
             mydb.closeConnectionManager();
-            return totalCustomer;
+            return totalProducts;
         }
         //TYPE
         public bool insertType(string tid, string tname)

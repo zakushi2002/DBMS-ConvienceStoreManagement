@@ -52,6 +52,7 @@ namespace ConvienceStore
                     PictureBoxEmployeeImage.Image.Save(pic, PictureBoxEmployeeImage.Image.RawFormat);
                     if (employee.insertEmployee(id, name, date, gender, phone, address, position, salary, pic))
                     {
+                        fillGrid("load");
                         txtEmployeeID.Clear();
                         txtBoxName.Clear();
                         txtBoxPhone.Clear();
@@ -85,7 +86,7 @@ namespace ConvienceStore
             string position = comboBoxPosition.Text;
             double salary = Convert.ToDouble(txtBoxSalary.Text);
             string gender = "Male";
-            if (radioButtonMale.Checked)
+            if (radioButtonFemale.Checked)
             {
                 gender = "Female";
             }
@@ -97,6 +98,7 @@ namespace ConvienceStore
                     PictureBoxEmployeeImage.Image.Save(pic, PictureBoxEmployeeImage.Image.RawFormat);
                     if (employee.updateEmployee(id, name, date, gender, phone, address, position, salary, pic))
                     {
+                        fillGrid("load");
                         txtEmployeeID.Clear();
                         txtBoxName.Clear();
                         txtBoxPhone.Clear();
@@ -132,6 +134,7 @@ namespace ConvienceStore
                 {
                     if (employee.deleteEmployee(txtEmployeeID.Text))
                     {
+                        fillGrid("load");
                         txtEmployeeID.Clear();
                         txtBoxName.Clear();
                         txtBoxPhone.Clear();
@@ -183,7 +186,26 @@ namespace ConvienceStore
 
         private void dataGridView_Click(object sender, EventArgs e)
         {
-
+            txtEmployeeID.Text = dataGridView.CurrentRow.Cells[0].Value.ToString();
+            txtBoxName.Text = dataGridView.CurrentRow.Cells[1].Value.ToString();
+            dateTimePicker.Value = (DateTime)dataGridView.CurrentRow.Cells[2].Value;
+            if (dataGridView.CurrentRow.Cells[3].Value.ToString().Trim() == "Male")
+            {
+                radioButtonMale.Checked = true;
+            }
+            else
+            {
+                radioButtonFemale.Checked = true;
+            }
+            txtBoxPhone.Text = dataGridView.CurrentRow.Cells[4].Value.ToString();
+            txtBoxAddress.Text = dataGridView.CurrentRow.Cells[5].Value.ToString();
+            comboBoxPosition.Text = dataGridView.CurrentRow.Cells[6].Value.ToString();
+            txtBoxSalary.Text = dataGridView.CurrentRow.Cells[7].Value.ToString();
+            //code xu ly hinh anh
+            byte[] pic;
+            pic = (byte[])dataGridView.CurrentRow.Cells[8].Value;
+            MemoryStream picture = new MemoryStream(pic);
+            PictureBoxEmployeeImage.Image = Image.FromStream(picture);
         }
         public void fillGrid(string type)
         {
@@ -197,18 +219,27 @@ namespace ConvienceStore
             }
             else if(type == "find")
             {
-                dataGridView.DataSource = employee.getEmployee("EXEC SP_FindEmployee "+txtSearchBox.Text);
+                if (txtSearchBox.Text.Trim() != "")
+                {
+                    dataGridView.DataSource = employee.getEmployee("EXEC SP_FindEmployee " + txtSearchBox.Text);
+                }
             }
+            dataGridView.ShowCellErrors = true;
             picCol = (DataGridViewImageColumn)dataGridView.Columns[8];
             picCol.ImageLayout = DataGridViewImageCellLayout.Stretch;
             dataGridView.Columns[2].DefaultCellStyle.Format = "dd/MM/yyyy";
             dataGridView.AllowUserToAddRows = false;
-            labelTotalEmployees.Text = "Total Employees: "+employee.totalEmployees();
+            labelTotalEmployees.Text = "Total Employees: "+ dataGridView.Rows.Count;
         }
 
         private void dataGridView_DataError(object sender, DataGridViewDataErrorEventArgs e)
         {
             dataGridView.ShowCellErrors = true;
+        }
+
+        private void cancelButton_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

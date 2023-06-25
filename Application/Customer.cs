@@ -13,7 +13,7 @@ namespace ConvienceStore
     {
         MY_DB mydb = new MY_DB();
         SqlCommand command;
-        public bool insertCustomer(string cid, string cname, float ctotalpay, string cphone)
+        public bool insertCustomer(string cid, string cname, double ctotalpay, string cphone)
         {
             command = new SqlCommand("EXEC SP_AddCustomer @c ,@name ,@total ,@phone ", mydb.getConnectionManager);
             command.Parameters.Add("@c", SqlDbType.NChar).Value = cid;
@@ -33,7 +33,7 @@ namespace ConvienceStore
             }
 
         }
-        public bool updateCustomer(string cid, string cname, float ctotalpay, string cphone)
+        public bool updateCustomer(string cid, string cname, double ctotalpay, string cphone)
         {
             command = new SqlCommand("EXEC SP_UpdateCustomer @c ,@name ,@total ,@phone ", mydb.getConnectionManager);
             command.Parameters.Add("@c", SqlDbType.NChar).Value = cid;
@@ -60,6 +60,14 @@ namespace ConvienceStore
             DataTable table = new DataTable();
             adapter.Fill(table);
             return table;
+        }
+        public string findCustomer(string phone)
+        {
+            mydb.openConnectionManager();
+            SqlCommand command = new SqlCommand("Select dbo.FN_FindCustomer('"+phone+"')", mydb.getConnectionManager);
+            string CustomerID = (string)command.ExecuteScalar();
+            mydb.closeConnectionManager();
+            return CustomerID;
         }
         public int totalCustomers()
         {

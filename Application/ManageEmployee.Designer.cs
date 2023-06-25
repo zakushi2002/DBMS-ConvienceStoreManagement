@@ -316,6 +316,7 @@
             this.cancelButton.Size = new System.Drawing.Size(48, 43);
             this.cancelButton.TabIndex = 135;
             this.cancelButton.UseVisualStyleBackColor = false;
+            this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
             // 
             // PictureBoxEmployeeImage
             // 
@@ -365,9 +366,9 @@
             // txtSearchBox
             // 
             this.txtSearchBox.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearchBox.Location = new System.Drawing.Point(211, 442);
+            this.txtSearchBox.Location = new System.Drawing.Point(225, 442);
             this.txtSearchBox.Name = "txtSearchBox";
-            this.txtSearchBox.Size = new System.Drawing.Size(291, 27);
+            this.txtSearchBox.Size = new System.Drawing.Size(277, 27);
             this.txtSearchBox.TabIndex = 141;
             // 
             // searchButton
@@ -384,11 +385,11 @@
             // labelTotalEmployees
             // 
             this.labelTotalEmployees.AutoSize = true;
-            this.labelTotalEmployees.Font = new System.Drawing.Font("Times New Roman", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTotalEmployees.Location = new System.Drawing.Point(638, 449);
+            this.labelTotalEmployees.Font = new System.Drawing.Font("Times New Roman", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTotalEmployees.Location = new System.Drawing.Point(649, 449);
             this.labelTotalEmployees.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelTotalEmployees.Name = "labelTotalEmployees";
-            this.labelTotalEmployees.Size = new System.Drawing.Size(162, 21);
+            this.labelTotalEmployees.Size = new System.Drawing.Size(152, 20);
             this.labelTotalEmployees.TabIndex = 139;
             this.labelTotalEmployees.Text = "Total Employees: 00";
             // 
@@ -409,7 +410,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(813, 873);
+            this.ClientSize = new System.Drawing.Size(813, 905);
             this.Controls.Add(this.labelSearch);
             this.Controls.Add(this.txtSearchBox);
             this.Controls.Add(this.searchButton);

@@ -16,5 +16,11 @@ namespace ConvienceStore
         {
             InitializeComponent();
         }
+
+        private void manageInvoiceToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ManageInvoice invoice = new ManageInvoice();
+            invoice.ShowDialog();
+        }
     }
 }
